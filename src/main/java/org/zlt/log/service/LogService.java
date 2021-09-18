@@ -1,6 +1,7 @@
 package org.zlt.log.service;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +12,10 @@ import org.springframework.stereotype.Service;
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000
  */
-@Slf4j
 @Service
 public class LogService {
+    private final static Logger log = LoggerFactory.getLogger(LogService.class);
+
     /**
      * 异步方法
      */

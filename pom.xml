@@ -14,8 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>8</java.version>
 
-        <spring-boot-dependencies.version>2.2.7.RELEASE</spring-boot-dependencies.version>
-        <spring-cloud-dependencies.version>Hoxton.SR4</spring-cloud-dependencies.version>
+        <spring-boot-dependencies.version>2.3.12.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>Hoxton.SR12</spring-cloud-dependencies.version>
     </properties>
 
     <dependencies>
@@ -27,11 +27,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
@@ -61,13 +56,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot-dependencies.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
         <finalName>${project.artifactId}</finalName>
