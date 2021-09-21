@@ -8,7 +8,8 @@
     <springProperty name="ServerIP" scope="context" source="spring.cloud.client.ip-address" defaultValue="0.0.0.0"/>
     <springProperty name="ServerPort" scope="context" source="server.port" defaultValue="0000"/>
 
-    <property name="LOG_PATTERN" value="[${APP_NAME}:${ServerIP}:${ServerPort}] %d{yyyy-MM-dd HH:mm:ss.SSS} %level ${PID} [%X{X-B3-TraceId},%X{X-B3-SpanId}] [%thread] %logger %m%n" />
+    <property name="LOG_PATTERN" value="[${APP_NAME}:${ServerIP}:${ServerPort}] %d{yyyy-MM-dd HH:mm:ss.SSS} %level ${PID} [%X{traceId},%X{spanId}] [%thread] %logger %m%n" />
+    <!--<property name="LOG_PATTERN" value="[${APP_NAME}:${ServerIP}:${ServerPort}] %d{yyyy-MM-dd HH:mm:ss.SSS} %level ${PID} [%X{traceId},%X{spanId},%X{parentId}] [%thread] %logger %m%n" />-->
 
     <!-- 控制台日志 -->
     <appender name="StdoutAppender" class="ch.qos.logback.core.ConsoleAppender">
